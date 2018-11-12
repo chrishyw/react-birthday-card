@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/react-birthday-card/precache-manifest.f1d56c7547ef6a869b446d13fca687b1.js"
+  "/react-birthday-card/precache-manifest.9188382041186f74996d14507ab7d97f.js"
 );
 
 workbox.clientsClaim();
