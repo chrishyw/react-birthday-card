@@ -12,23 +12,23 @@ self.__precacheManifest = [
     "url": "/react-birthday-card/static/js/runtime~main.3ca9e7d0.js"
   },
   {
-    "revision": "dcc5973fc99c25d3333d",
-    "url": "/react-birthday-card/static/js/main.dcc5973f.chunk.js"
+    "revision": "8446d7bb859cdf4e9f2e",
+    "url": "/react-birthday-card/static/js/main.8446d7bb.chunk.js"
   },
   {
     "revision": "32a48f9a6e0f954a9845",
     "url": "/react-birthday-card/static/js/1.32a48f9a.chunk.js"
   },
   {
-    "revision": "dcc5973fc99c25d3333d",
-    "url": "/react-birthday-card/static/css/main.bcb60125.chunk.css"
+    "revision": "8446d7bb859cdf4e9f2e",
+    "url": "/react-birthday-card/static/css/main.ae52a999.chunk.css"
   },
   {
     "revision": "32a48f9a6e0f954a9845",
     "url": "/react-birthday-card/static/css/1.a84b948a.chunk.css"
   },
   {
-    "revision": "050414da5914a3f54b4f84624906fec4",
+    "revision": "9aa21a89ac0b2deddfa0f45ceb3691c3",
     "url": "/react-birthday-card/index.html"
   }
 ];
