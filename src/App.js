@@ -3,8 +3,9 @@ import 'bootstrap/dist/js/bootstrap.min';
 import React, { Component } from 'react';
 import "./App.css";
 import anime from "animejs";
-import picture from "./S__42827780.jpg"
-import omg from "./omg.jpg"
+import picture from "./S__42827780.jpg";
+import omg from "./omg.jpg";
+import BirthdayCard from "./card";
 
 class App extends Component {
 
@@ -124,7 +125,7 @@ class App extends Component {
 
     return (
       <div className="App" style={div_style}>
-        <img id="omg" src={omg} style={hidden} title="BL" />
+        <img id="omg" src={omg} style={hidden} title="BL" alt="BL" />
         <h2 style={hidden} id="question">請問這位喜歡看的東西是什麼?</h2>
         <small style={hidden} id="small">我只是想確認我沒有寄錯信 :P (答案可從游標指到圖找)</small>
         <input onChange={this.handleChange} id="input_field" name="answer" style={hidden} className={input_classes.join(" ")} placeholder="請填寫" />
@@ -135,17 +136,14 @@ class App extends Component {
         </svg>
 
         <div id="blip">
-            <div id="card_msg">
-              <h1>臭老爸:</h1>
-              <p>想說這次剛好在準備Portfolio的時候幫老爸做一個簡單的網路生日卡，這是我花一些時間做的以後我會花多點心思。 我前幾天有夢到我跟全家在鼎泰豐慶祝老爸的生日，希望以後有機會可以和全家
-              一起幫你過生日! 我還是一樣很謝謝老爸跟老媽一路來的幫助跟支持。 願老爸事業成功跟身體健康! 生日快樂老爸!</p>
-
-              <p style={{position: "absolute", bottom: "-10px", right: "2px", fontSize: "0.5em"}}>臭兒子</p>
-            </div>
+            
         </div>
+
+        <BirthdayCard hidden={this.state.answer} />
+
         <h1 style={{position: "absolute", left: "5%", bottom: "10%"}}>Built by
           <span
-             class="txt-rotate"
+             className="txt-rotate"
              data-period="2000"
              data-rotate='[ " Christopher Wang.", " 王皓宇", " 多多", " 弟弟" ]'></span>
         </h1>
