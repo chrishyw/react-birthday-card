@@ -79,7 +79,7 @@ class App extends Component {
         <div id="blip">
             <div id="card_msg">
               <h1>臭老爸:</h1>
-              <p>Isn't it cool? Here's a little more text to know that what AnimeJS can do to your webpage.</p>
+              <p>想說這次剛好在準備Portfolio的時候幫老爸做一個簡單的網路生日卡，這是我花一些時間做的以後我會花多點心思。 今天老爸</p>
 
               <p style={{position: "absolute", bottom: "-10px", right: "2px"}}>臭兒子</p>
             </div>
