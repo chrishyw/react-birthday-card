@@ -61,7 +61,7 @@ class App extends Component {
 
   render() {
 
-    console.log("rendered!");
+    console.log("render!!");
     var TxtRotate = function(el, toRotate, period) {
       this.toRotate = toRotate;
       this.el = el;
