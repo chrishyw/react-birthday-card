@@ -60,6 +60,64 @@ class App extends Component {
 
   render() {
 
+
+    var TxtRotate = function(el, toRotate, period) {
+      this.toRotate = toRotate;
+      this.el = el;
+      this.loopNum = 0;
+      this.period = parseInt(period, 10) || 2000;
+      this.txt = '';
+      this.tick();
+      this.isDeleting = false;
+    };
+
+    TxtRotate.prototype.tick = function() {
+      var i = this.loopNum % this.toRotate.length;
+      var fullTxt = this.toRotate[i];
+
+      if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+      } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+      }
+
+      this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+      var that = this;
+      var delta = 300 - Math.random() * 100;
+
+      if (this.isDeleting) { delta /= 2; }
+
+      if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+      } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+      }
+
+      setTimeout(function() {
+        that.tick();
+      }, delta);
+    };
+
+    window.onload = function() {
+      var elements = document.getElementsByClassName('txt-rotate');
+      for (var i=0; i<elements.length; i++) {
+        var toRotate = elements[i].getAttribute('data-rotate');
+        var period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+          new TxtRotate(elements[i], JSON.parse(toRotate), period);
+        }
+      }
+      // INJECT CSS
+      var css = document.createElement("style");
+      css.type = "text/css";
+      css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+      document.body.appendChild(css);
+    };
+
     let div_style = this.state.answer ? {backgroundImage: `url(${picture})`, backgroundRepeat: "no-repeat", backgroundSize: "cover"} : {backgroundImage: "none"};
     let hidden = this.state.answer ? {display: "none"} : {display: "block"};
     let input_classes = this.state.incorrect ? ["form-control", "invalid"] : ["form-control"];
@@ -79,11 +137,18 @@ class App extends Component {
         <div id="blip">
             <div id="card_msg">
               <h1>臭老爸:</h1>
-              <p>想說這次剛好在準備Portfolio的時候幫老爸做一個簡單的網路生日卡，這是我花一些時間做的以後我會花多點心思。 今天老爸</p>
+              <p>想說這次剛好在準備Portfolio的時候幫老爸做一個簡單的網路生日卡，這是我花一些時間做的以後我會花多點心思。 我前幾天有夢到我跟全家在鼎泰豐慶祝老爸的生日，希望以後有機會可以和全家
+              一起幫你過生日! 我還是一樣很謝謝老爸跟老媽一路來的幫助跟支持。 願老爸事業成功跟身體健康! 生日快樂老爸!</p>
 
-              <p style={{position: "absolute", bottom: "-10px", right: "2px"}}>臭兒子</p>
+              <p style={{position: "absolute", bottom: "-10px", right: "2px", fontSize: "0.5em"}}>臭兒子</p>
             </div>
         </div>
+        <h1 style={{position: "absolute", left: "5%", bottom: "10%"}}>Built by
+          <span
+             class="txt-rotate"
+             data-period="2000"
+             data-rotate='[ " Christopher Wang.", " 王皓宇", " 多多", " 弟弟" ]'></span>
+        </h1>
       </div>
     );
   }
