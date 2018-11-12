@@ -1,7 +1,7 @@
 {
   "main.css": "/react-birthday-card/static/css/main.ae52a999.chunk.css",
-  "main.js": "/react-birthday-card/static/js/main.8446d7bb.chunk.js",
-  "main.js.map": "/react-birthday-card/static/js/main.8446d7bb.chunk.js.map",
+  "main.js": "/react-birthday-card/static/js/main.55282188.chunk.js",
+  "main.js.map": "/react-birthday-card/static/js/main.55282188.chunk.js.map",
   "static/css/1.a84b948a.chunk.css": "/react-birthday-card/static/css/1.a84b948a.chunk.css",
   "static/js/1.32a48f9a.chunk.js": "/react-birthday-card/static/js/1.32a48f9a.chunk.js",
   "static/js/1.32a48f9a.chunk.js.map": "/react-birthday-card/static/js/1.32a48f9a.chunk.js.map",
@@ -12,6 +12,6 @@
   "static/media/omg.jpg": "/react-birthday-card/static/media/omg.4542335d.jpg",
   "static/css/1.a84b948a.chunk.css.map": "/react-birthday-card/static/css/1.a84b948a.chunk.css.map",
   "index.html": "/react-birthday-card/index.html",
-  "precache-manifest.5ec70eebdf48a685b8f51cf4b8007f30.js": "/react-birthday-card/precache-manifest.5ec70eebdf48a685b8f51cf4b8007f30.js",
+  "precache-manifest.8036953c67afb77ee8e865c39579c905.js": "/react-birthday-card/precache-manifest.8036953c67afb77ee8e865c39579c905.js",
   "service-worker.js": "/react-birthday-card/service-worker.js"
 }
